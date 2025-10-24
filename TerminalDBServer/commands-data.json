@@ -1,0 +1,20 @@
+[
+  {
+    "name": "heusta_get_all",
+    "terminalNum": 1,
+    "description": "Updated asdfasdf\n\nasd",
+    "id": "432ae2b3-e2ce-4ba0-8465-8dde3e693466"
+  },
+  {
+    "name": "command_name",
+    "terminalNum": 1,
+    "description": "ssssssssssss\n\n\nasdasdasd",
+    "id": "e6e03b2d-9730-44ab-9338-62136eb23d6a"
+  },
+  {
+    "name": "moreinst",
+    "terminalNum": 1,
+    "description": "this is a new terminal command\n\nsee below\n\nfor \nmore\n\n\ninstructions\n\n\n\n\nadsdasd",
+    "id": "3a018ac9-e409-4d3d-a931-67de198188e2"
+  }
+]
