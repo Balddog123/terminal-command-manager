@@ -1,11 +1,14 @@
 # Instructions
-1. cd to terminal-command-manager
-2. run 'npm run dev'
-3. split terminal
-4. cd to TerminalDBServer
-5. run 'node server'
-6. Server should say it is listening at port 5050. Client should give a link to localhost to run the frontend.
-7. Ctrl+Click the link
+Open the terminal-command-manager repo folder and open in your IDE.
+1. cd to the terminal-command-manager subfolder (I apologize for naming the parent and subfolder the same name...)
+2. run 'npm install' to install node packages
+3. run 'npm run dev'
+4. split terminal
+5. cd to TerminalDBServer
+6. run 'npm install' to install node packages for backend
+7. run 'node server'
+8. Server should say it is listening at port 5050. Client should give a link to localhost to run the frontend.
+9. Ctrl+Click the link
 
 # How to use the app
 1. Changes made to the text areas are saved when the user's focus leaves the text area.
