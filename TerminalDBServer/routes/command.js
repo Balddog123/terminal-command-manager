@@ -6,6 +6,19 @@ import {v4 as uuidv4} from "uuid";
 const router = express.Router();
 const DATA_PATH = path.resolve("commands-data.json");
 
+//helper
+// array -> object
+const arrayToObject = (arr) =>
+  arr.reduce((acc, cmd) => {
+    const key = Object.keys(cmd)[0];
+    acc[key] = cmd[key];
+    return acc;
+  }, {});
+
+// object -> array
+const objectToArray = (obj) =>
+  Object.keys(obj).map(key => ({ [key]: obj[key] }));
+
 // Read commands
 async function getCommands() {
   try {
@@ -56,22 +69,32 @@ router.get("/:id", async (req, res) => {
 // POST route: add a new command
 router.post("/", async (req, res) => {
   try {
+    console.log(`Attempting to add new command:`);
+    console.log(req.body);
     const commands = await getCommands();
-    const newCommand = req.body;
-
-    newCommand.id = uuidv4();
-
-    commands.push(newCommand);
-    await saveCommands(commands);
-
-    res.status(201).json({ message: "Command added", command: newCommand });
+    console.log(`Attempting to get commands:`);
+    console.log(commands);
+    // object -> array
+    console.log(`Attempting to convert json to array:`);
+    const commandsToArray = objectToArray(commands);    
+    console.log(commandsToArray);
+    console.log(`Attempting to push new command to array:`);
+    commandsToArray.push(req.body);
+    console.log(commandsToArray);
+    console.log('Attempting to convert array to single object');
+    const newCommands = arrayToObject(commandsToArray);
+    console.log(newCommands);
+    console.log(`Attempting to save commands:`);
+    await saveCommands(newCommands);
+    console.log(commands);
+    res.status(201).json({ message: "Command added"});
   } catch (error) {
     res.status(500).json({ message: "Error saving command", error });
   }
 });
 
 //PUT: update single command
-router.put("/:id", async (req, res) => {
+router.put("/updateone/:id", async (req, res) => {
   console.log(`Attempting to update command ${req.params.id}...`);
     try{
       const commands = await getCommands();
@@ -92,15 +115,25 @@ router.put("/:id", async (req, res) => {
     }
 });
 
+router.put("/updateall", async(req, res) => {
+  console.log("Attempting to update all commands");
+  try{
+    await saveCommands(req.body);
+    res.status(200).json({message: "All commands updated"});
+  }catch(error){
+    res.status(500).json({message: "Error updating all commands", error});
+    }
+});
+
 //DELETE
-router.delete("/:id", async(req, res) => {
-  console.log(`Attempting to delete command ${req.params.id}...`);
+router.delete("/:key", async(req, res) => {
+  console.log(`Attempting to delete command ${req.params.key}...`);
     try{
         const commands = await getCommands();
-        const updated = commands.filter((cmd) => cmd.id !== req.params.id);
+        const updated = commands.filter(cmd => Object.keys(cmd)[0] === req.params.key);
 
         if(updated.length === commands.length){
-            return res.status(404).json({message: `Command with id ${req.params.id} not found`});
+            return res.status(404).json({message: `Command with id ${req.params.key} not found`});
         }
 
         await saveCommands(updated);

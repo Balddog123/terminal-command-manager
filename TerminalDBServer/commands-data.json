@@ -1,20 +1,364 @@
-[
-  {
-    "name": "heusta_get_all",
-    "terminalNum": 1,
-    "description": "Updated asdfasdf\n\nasd",
-    "id": "432ae2b3-e2ce-4ba0-8465-8dde3e693466"
-  },
-  {
-    "name": "command_name",
-    "terminalNum": 1,
-    "description": "ssssssssssss\n\n\nasdasdasd",
-    "id": "e6e03b2d-9730-44ab-9338-62136eb23d6a"
-  },
-  {
-    "name": "moreinst",
-    "terminalNum": 1,
-    "description": "this is a new terminal command\n\nsee below\n\nfor \nmore\n\n\ninstructions\n\n\n\n\nadsdasd",
-    "id": "3a018ac9-e409-4d3d-a931-67de198188e2"
-  }
-]
+{
+    "debug_act1": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "act", "value": 1},
+        "text": "[DEBUG] Set act to 1."
+    },
+    "debug_act2": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "act", "value": 2},
+        "text": "[DEBUG] Set act to 2."
+    },
+    "debug_act3": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "act", "value": 3},
+        "text": "[DEBUG] Set act to 3."
+    },
+    "debug_keys": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "boughtKeys", "value": true},
+        "text": "[DEBUG] Keys ordered."
+    },
+    "debug_keys_false": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "boughtKeys", "value": null},
+        "text": "[DEBUG] Keys un-ordered."
+    },
+    "debug_uninstall_game": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "installedGame", "value": false},
+        "text": "[DEBUG] Uninstalled the Pixel Vision Game."
+    },
+    "debug_disable_game": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "gameDisabled", "value": true},
+        "text": "[DEBUG] Pixel Vision Game disabled."
+    },
+    "debug_enable_game": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "gameDisabled", "value": false},
+        "text": "[DEBUG] Pixel Vision Game enabled."
+    },
+    "debug_reset_login": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "loggedIn", "value": false},
+        "text": "[DEBUG] Login reset."
+    },
+    "debug_ending": {
+        "debug_only": true,
+
+        "set_session_data": {"name": "ending", "value": true},
+        "text": "[DEBUG] Ending enabled."
+    },
+		
+		
+		
+    ".onion": {
+        "text": "                     ..:...                      \n               .;+XxXXXXXX$XXXXx;:               \n           .;++++++x+xxxxXX$$$$$$$XX+            \n         :;++;;:;;;:;++++XXXXXXXXXXXXx+:         \n       :++x++. .;+;+++++;;XXXXXXXXXX$$$$X;       \n     :+xx+++: .+X++X+;;+xx$$$$$$$XX$$$$XXX+.     \n    ;+XXXX+;::;+xX+$$XX$+XXX$$X$$$$$$$$$$$$X:    \n   ;+XXXXx+;;::;;++++X$X$$$$$$XXX$$$$XXXX$$$X;   \n  ;+xxxxx+;;::;:::;;;X$X$XXXXXxXXXXXX$$$xxX$$X:  \n .;+XXX++;:::::::;:::;+xx;;;;+XXXXXX$$XX++X$$X+  \n :xXXxx++;;:..::::;::   .;;;+xxxXXXXXxXx+;X$$Xx. \n ;xxxx+++;:::.::..    .   .:::+XXxXX+xxx+x$$$$X; \n ;+x+xX+;;;::;:.   :XX+;&Xx$X;;::++++++xX$$$$XX+ \n ;++xx+;++;;+;    ;$&&$X&++xX&&$;:++++X$$$$$$XX+ \n :;++;;+++++;    :$+:++::;:::;&&X::xX$$$$$$$XXX+ \n .;+++++++++. ..+X+;:;;::;::;:;&&$;x$$$X$$$XXXx; \n  :;++++++++:.:::++:::;::;::;:;$&$;+$$$XXX$$XX+. \n   ;++++x++x+.:::X&&$&&$:;x&&&&X&$+XX$$$$$X$Xx;  \n   .;+++x+xx+:::;+&&&&&;:;+$&&$X&$$$$$$$$$$X$+   \n    :;+xx+xxx+::+;;X&X;X:;;::;;;$$$$$$$$$$$$x    \n     .;+++xxXXxx$+:::x+;:;;X&x++$$$$$$$$&&&+     \n      .;;+++xxxXX+::;++;+$X+$Xx$$$&$&&&&&$;      \n         :;++++xxXx:;+X$X$$XxX$$$&&&&&&$X:..     \n           ;+++xXX$X++++&&XxX$&&&&&&&$X;:::::... \n             :;xXX$$$$XxX$X$&&&&&$$x;;;::::::::..\n                .:++xXXXXX$$$XXx++;;;;::::::::..."
+    },
+    ".community": {
+        "text": "Video created by Minhu",
+        "video": "assets/secrets/theorists_compilation.webm",
+        "media_scale": 0.75
+    },
+    ".nutella": {
+        "text": "                                      ...              \n                     .+.-.       ..........+%%+.       \n                    -@*#@@@@...........=@@#*=-*+       \n                ..@@+@................@**===--==       \n           *@%#***=-+:...........%@@@@*+==-%@*=+       \n        +@#=-----===+#......@@@@@%#=@::-=*@#=.+@@%@#   \n      .@=--=--=****+****@@@@@.*=-==-@@@@@:::%@@--::*#  \n     .%-==--@@@@%%%%%@@@**#*.#**####+=-::+@%====+=-=*  \n    -@===-@@%#######%#@++*#:#@##*+=-%@@@@*----=***+@.  \n    @===:@%%####%##%*@#.##:+++%@@@@@@...@@#%@@@@=.@    \n    @:==#@###%###%@@%*=%@*@@@@@.......+.#:##..#..:#@:  \n   .@:=-@#####%%%@%++*+@@........#######=###.....@+-@  \n   -@@=.#@#%%%%%@@*@@@:::..@@@#.#.+#.##........@@*=-%. \n   .@@@@@%%%%%%@@+@@....*..@.@%##-.....:%%#::@#*==**@+ \n    #%%%%%%%%%@@+@...=##+...@....:%#@....:.@**==**@-.  \n    *%%%%%%%%%@*+*@#...........@@%@#++=#+%@%#%%%@..... \n   .@%%%%%%%@@@+#-#@....@@..*:#==..:::..........@@@@@. \n   #@%%%%%@%##.#-==%@@@***..*...@.........@@@@@@%.*+.  \n   =@%%%%+%@@=#==+=++++=+*#.........@@@@@@%#**+=*@.    \n    %%##%@@@====++++++++++*..:@@@@@@@#+**+-#*:*@.      \n    =%@%%@@@-=++++++++==--**@@@#::**==*=:@+--#+        \n     .%%%@--=++++===-==@@@@*+==++%+=+=@.  %%-          \n      .%@@-=++==-=+@@@+=--==++++++==-*%                \n       .#%::---+@@==-===++++++===:*@@+                 \n         .@@%*@@+:-======++==--*@@@                    \n                %@#++===++=**@@=                       \n                  ..-@@--==%                           \n                                                       "
+    },
+    ".backbone": {
+        "audio": "assets/secrets/fnaf_holiday.mp3"
+    },
+    ".remind": {
+        "text": ".  .                         .   .  .               \n|- |-. . ,-.  . ,-.  ,-. ,-. |-  |- |-. ,-.         \n|  | | | `-.  | `-.  | | | | |   |  | | |-'         \n`' ' ' ' `-'  ' `-'  ' ' `-' `'  `' ' ' `-'         \n                                                    \n          .          .  .            .              \n,-. ,-. ,-|  ,-. ,\"  |- |-. ,-.  ,-. |- ,-. ,-. . . \n|-' | | | |  | | |-  |  | | |-'  `-. |  | | |   | | \n`-' ' ' `-^  `-' |   `' ' ' `-'  `-' `' `-' '   `-| \n                 '                               /| \n                                                `-' "
+    },
+    ".crashout": {
+        "text": "\n&&&&&&&&&&...&&&&&&&&..&&&&&&&&..&&&&&&&&&..&&&&&&&&&\n.&&&&&&&&&&...&&&&&&:...&&&&&&...&&&&&&&&..&&&&&&&&&&\n...&&&&&&&&&.&.&&&&&&.&.&&&&&$.&.&&&&&&.&.&&&&&&&&&&+\n&&...&&&&&&&....&&&&.....&&&&....&&&&$...&&&&&&&&&...\n&&&....&&&&&&x.&..&&&.&..X&&.&.&.&&&....&&&&&&&&...$&\n&&&&&.....&&&&.....&......&:.....&&....&&&&&&.....&&&\n&&&&&&......&&&.......................&&&&&.....&&&&&\n.&&&&&&&;......;.X..X.&.+...:x.&.X...&&&....X.&&&&&&&\n.....&&&&&.....&&&&&...X&&&&:...&&&&........&&&&&&&&&\n.:&:.....:.&.&&&&&&..&&&&&&&&&&.&&&&&&:.&..&&&.....&.\n.............&&&&&.&&&&&&&&&&&&&.&&&&&&..............\n...........&&&&&&&.&&&&&&&&&&&&&.&&&&&&&&&...........\n.:&.$.&&&&&&&&&&&..&&&&&&&&&&&&&...&&&&&&&&&&..&.&.&.\n....&&&&&&&&&X.....&&&&&&&&&&&&&......&&&&&&&&&&.....\n.&&&&&&&&&...&.&.&.&&&&&&&&&&&&&.&.&&;....&&&&&&&&.&.\n...&&&&&&&&&&&.....&&&&&&&&&&&&&......&&&&&&&&&&.....\n......&&&&&&&&&&&...X&&&&&&&&&&...&&&&&&&&&&&&.......\n..:.:...&&&&&&&&&&&&.&&&&&&&&&.&&&&&&&&&&&&&...X.:...\n...........&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&............\n.:&.&.&.&...&&&&&&&&&&&&&&&&&&&&&&&&&&&...&.&&.&.&.&.\n...............&&&&&&&&&&&&&&&&&&&&&&................\n.................&&&&&&&&&&&&&&&&&...................\n..:.:.x.;..:.:...&&&&&&&&&&&&&&&&&......;.X....+.:...\n..................&&&&&&&&&&&&&&&&...................\n..&.&.&.&..&.&.&.&.&&&&&&&&&&&&&&&.XX.&.&.&.&+.&.&.&.\n "
+    },
+    ".micyes": {
+        "text": "*##***#####**##*****************+++++++++***+.##%@@@@\n*##*#*#####**###****=-::-..:..::-==+++++****-:##%@@@@\n*##*###########**=.......:-=+*+=+++**++++***:=##%@@@@\n*#############*-.....:+###%%%%%%%%#########*.+##%@@@@\n###***######*-...-=*%%%%%%%%%%#############*.+##%@@@@\n******#*****+...=%%%%%%%%%%%%#######%%####**-*##%@@@@\n******#***=+-##%%%%###############%#####*#**+*##%@@@@\n******#**:...%%%%%##**++++++***##########****###%@@@@\n******#*+...+%%%%###*+==-----=+***######**##***#%@@@@\n*********.:=#**%%#**++=-:::----=====+*+++***-###%@@@@\n*******#+..-.=.+##**++==-::----:::..:---=+*=+##%%@@@@\n#####*##+..:...:%%#*++==--::---:::.:::---=-:*#%%@@@@@\n******##=.......#%#*++===-------::::----=:..#%%%@@@@@\n*******#+.......*%%#+====---------:---===:..#%%%@@@@@\n*******#*:..:..:*#*%%#+=-:-----:-:------=#=.%%%%@@@@@\n*********=:.-.::+*==#%%#**++=----------===@%##%%@@@@@\n%*+++++**+++-.--+====+@@@@@@@%%%*+++#%%%@@@@@%%@@@@@@\n++**++=++**===+*+==+===#++**####%@@@*****#%@@%%%%%%%%\n++==-===++*==++**+++++=++===+*#%*:=*++*##%%#%%%%%%%%%\n========+**===++#*+++++++*###%#--:=*%######%@@@%%%%%%\n=++===+==*++==++#%#*++*****++==---=++**+*#%%%@%%%%%%%\n=++++++==+***+++*###**###****##*++++++++**#%%%%%%%%%%\n++*+++++=+**#*****%###*%@@%%%%#%%+++++++++*%%%%%%%%%%\n++*++++++++**##++*%%%#*#%@%%%%%%%#++++++++++%%%%%%%%%\n+*++++++++++***####*#%%%%%%@%%@%%%*++++++++#%%@@@@@@%\n+*++++++=+*+++#*###+==+*#%@@%%@%%@%*++++++*%%@%%@@@@@\n++++=+++==+++++*##**++*+=+@@@@@%@@@%+++++*++#%%%%@%%*\n++=+++++++****++**##**==-=#@@@%%%%%%###%%%%@@@@@@@@%%\n++++++++++***+++******+=++*@@%#%%%%%###%%%@@@%%%%%%%%"
+    },
+    ".theultimatesecret": {
+        "text": "Sorry, not sorry",
+        "video": "assets/secrets/super_secret.webm",
+        "media_scale": 1
+    },
+
+
+
+    ".credits:.Credits:.CREDITS": {
+        "text": "╔═════════════════════════════════════════╗\n║                 CREDITS                 ║\n╟────────────────────┬────────────────────╢\n║ Brayden Odom       │ R_0UnD3            ║\n║ Brenton Heward     │ raaaahman          ║\n║ Dallin Heward      │ Robin Crew/Rezllen ║\n║ DJSmell            │ Rustin L Odom      ║\n║ FadeRax            │ Taaryn             ║\n║ JAMESDEV           │ Waffleguy          ║\n║ Jarom Jones        │ .undefined         ║\n║ Kacey Roberts      │                    ║\n║ Kathy-Chan         │                    ║\n║ Koulas             │  We all hope you   ║\n║ lopsoplo           │  had fun!     <3   ║\n╙────────────────────┴────────────────────╜"
+    },
+    ".braydenodom:.Braydenodom:.BraydenOdom:.BRAYDENODOM:.brayden odom:.Brayden odom:.Brayden Odom:.BRAYDEN ODOM": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".brentonheward:.Brentonheward:.BrentonHeward:.BRENTONHEWARD:.brenton heward:.Brenton heward:.Brenton Heward:.BRENTON HEWARD": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".dallinheward:.Dallinheward:.DallinHeward:.DALLINHEWARD:.dallin heward:.Dallin heward:.Dallin Heward:.DALLIN HEWARD": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".djsmell:.DJSmell:.DJsmell:.DJSMELL": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".faderax:.Faderax:.FadeRax:.FADERAX": {
+        "html": "<pre>Made by FadeRax and Casey!! :D</pre><img src=\"https://i.imgur.com/HjeDRtX.png\" style=\"width:100px;height:100px;\">"
+    },
+    ".jamesdev:.Jamesdev:.JamesDev:.JAMESDEV": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".jaromjones:.Jaromjones:.JaromJones:.JAROMJONES:.jarom jones:.Jarom jones:.Jarom Jones:.JAROM JONES": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".kaceyroberts:.Kaceyroberts:.KaceyRoberts:.KACEYROBERTS:.kacey roberts:.Kacey roberts:.Kacey Roberts:.KACEY ROBERTS": {
+        "html": "<pre>Made by FadeRax and Casey!! :D</pre><img src=\"https://i.imgur.com/HjeDRtX.png\" style=\"width:100px;height:100px;\">"
+    },
+    ".kathy-chan:.Kathy-Chan:.Kathy-chan:.KATHY-CHAN:.kathychan:.KathyChan:.Kathychan:.KATHYCHAN": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".koulas:.Koulas:.KOULAS": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".lopsoplo:.Lopsoplo:.LOPSOPLO": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".r_0und3:.R_0UnD3:.R_0UND3": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".raaaahman:.Raaaahman:.RAAAAHMAN": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".robincrew:.RobinCrew:.ROBINCREW:.robin crew:.Robin Crew:.ROBIN CREW:.rezllen:.Rezllen:.REZLLEN": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".rustinlodom:.RustinLOdom:.Rustinlodom:.RUSTINLODOM:.rustin l odom:.Rustin L Odom:.Rustin l odom:.RUSTIN L ODOM": {
+        "url": "theindex.world"
+    },
+    ".taaryn:.Taaryn:.TAARYN": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".waffleguy:.Waffleguy:.WaffleGuy:.WAFFLEGUY": {
+        "text": "[Error] Command has not yet been defined! Maybe try again later?"
+    },
+    ".undefined": {
+        "html": "<pre><span style=\"opacity: 0;\">Thank you for inviting me to this project</span><br>My thoughts have always been filled with wonder,<br>But life interrupts like a resounding <span style=\"color: #2fef2f;\">thunder</span>.<br><span style=\"opacity: 0;\">I've had an amazing time working on this</span><br>I took up the <span style=\"color: #0093ff;\">sword</span> but never felt sure,<br>When I glance back at memories, I see only a blur.<br><span style=\"opacity: 0;\">I'm not even sure if anyone will ever see this</span><br>My eyes gaze with <span style=\"color: #f30c0c;\">ambivalence</span> up towards the sky,<br>Asking one simple question to the world, \"why?\".<br><span style=\"opacity: 0;\">In either case, this experience has been amazing</span><br>I've always wanted to reach for the stars,<br>But as I stare at <span style=\"color: #f503f5;\">space</span> it seems so far.<br><span style=\"opacity: 0;\">For my friends, I hope you get a kick out of this</span><br>As I look to the future with my heart and my mind,<br>My <span style=\"color: #ff8400;\">fierce</span> resolve grows to learn the fate I shall find.<br><span style=\"opacity: 0;\">For Dallin, thank you again for this opportunity</span><br>My last <span style=\"color: #1fffff;\">hope</span> I hold till death do us part,<br>Perhaps someone can see us as a true work of art.<br><span style=\"opacity: 0;\">For everyone else, I hope you enjoy the ARG</span><br>    ~Anonymous<br><span style=\"opacity: 0;\">I know I sure have ~FT_</span></pre>"
+    },
+
+
+
+    "Alira": {
+        "text": "Trust me. Please. Not every whisper is of the dark."
+    },
+    "Awakened:awakened:The Awakened:the awakened:TheAwakened:theawakened": {
+        "url": "https://discord.gg/fuft2rYvyE"
+    },
+    "birthday:What is my birthday:When is my birthday:Whatismybirthday:Whenismybirthday": {
+        "text": "I apologize but you have never told me that."
+    },
+    "Blight:blight": {
+        "url": "https://www.youtube.com/watch?v=_8ZCzhoeQMg"
+    },
+    "Creator:creator": {
+        "set_session_data": {"name": "projectuthedasreward", "value": true},
+        "image": "assets/rewards/creator.jpg",
+        "media_scale": 0.35,
+        "text": "Project Uthedas 2025"
+    },
+    "CREATION:Creation:creation": {
+        "text": "The beginning of all things and the pursuit of something beyond yourself."
+    },
+    "Dallin": {
+        "text": "Hello user"
+    },
+    "DH" : {
+        "text": "Sorry, you missed the deadline to enter the NeoArcade Games sweepstakes."
+    },
+    "DHeusta:dheusta": {
+        "url": "https://www.youtube.com/@dheusta"
+    },
+    "E5864": {
+        "set_session_data": {"name": "terminalvideoreward", "value": true},
+        "video": "assets/rewards/E5864.mp4",
+        "media_scale": 0.5
+    },
+    "favorite color": {
+        "text": "Purple"
+    },
+    "hello": {
+        "text": "Hello there"
+    },
+    "Helmet:helmet": {
+        "url": "https://www.google.com/search?q=vile+megaman+x"
+    },
+    "HELMET": {
+        "url": "https://www.google.com/search?q=daft+punk"
+    },
+    "I'm scared:i'm scared:imscared:im scared": {
+        "text": "Might not be a bad idea to see a shrink! Maybe stop being scared...?"
+    },
+    "Mask:mask": {
+        "text": "Do not mistake the mask for mercy",
+        "url": "https://www.youtube.com/watch?v=5rfY-f9odmk"
+    },
+    "Phase:phase": {
+        "text": "Please specify a phase to load..."
+    },
+    "Phase 1:phase 1:Phase1:phase1": {
+        "url": "https://web.archive.org/web/20250628223128if_/https://themindplex.com/"
+    },
+    "Phase 2:phase 2:Phase2:phase2": {
+        "url": "https://web.archive.org/web/20250701150947if_/https://themindplex.com/"
+    },
+    "Phase 3:phase 3:Phase3:phase3": {
+        "url": "https://web.archive.org/web/20250704153512if_/https://themindplex.com/"
+    },
+    "Phase 4:phase 4:Phase4:phase4": {
+        "url": "https://web.archive.org/web/20250707164215if_/https://themindplex.com/"
+    },
+    "Phase 5:phase 5:Phase5:phase5": {
+        "url": "https://web.archive.org/web/20250710151341if_/https://themindplex.com/"
+    },
+    "Phase 6:phase 6:Phase6:phase6": {
+        "url": "https://web.archive.org/web/20250713231252if_/https://themindplex.com/"
+    },
+    "Phase 7:phase 7:Phase7:phase7": {
+        "url": "https://web.archive.org/web/20250716171002if_/https://themindplex.com/"
+    },
+    "Phase 8:phase 8:Phase8:phase8": {
+        "text": "\n[ArchiveWorker] Failed to locate backup!\n\nUncaught (in promise) ArchiveCorruptionError: Checksum mismatch for D.mp3\n    at fetchBackup (https://web.archive.org/static/js/archive-fetch.js:88:17)\n    at async locateBackup (https://web.archive.org/static/js/archive-restore.js:201:23)\n    at async recoverSnapshot (https://web.archive.org/static/js/snapshot-loader.js:45:11)\n​"
+    },
+    "Phase 9:phase 9:Phase9:phase9": {
+        "url": "https://web.archive.org/web/20250723033249if_/https://themindplex.com/"
+    },
+    "Pixel Vision:pixel vision:pixelvision:PixelVision": {
+        "url": "https://www.youtube.com/watch?v=KlxUinwGJzI"
+    },
+    "Stay Awake:Stay awake:stay awake:STAY AWAKE:StayAwake:Stayawake:stayawake:STAYAWAKE:Umbracore:UmbraCore:umbracore:UMBRACORE": {
+        "url": "/stayawake"
+    },
+    "Thanks!:thanks!:Thanks:thanks": {
+        "text": "Anytime!"
+    },
+    "We are not the same:we are not the same:WE ARE NOT THE SAME:Wearenotthesame:wearenotthesame:WEARENOTTHESAME": {
+        "url": "https://shop.dheusta.com/products/awakened-unisex-t-shirt"
+    },
+    "What do I do:what do i do:What do I do?:what do i do?:What am I supposed to do:what am i supposed to do:What am I supposed to do?:what am i supposed to do?": {
+        "text": "Start by figuring out who you are."
+    },
+    "What is this:what is this:Whats going on:What's going on:whats going on:what's going on": {
+        "text": "A memory"
+    },
+    "What is your name?:what is your name?:What is your name:what is your name": {
+        "text": "I am a series of 1’s and 0’s. Nothing special."
+    },
+    "Who are you?:who are you?:Who are you:who are you": {
+        "text": "I am your personal, virtual assistant! Whatever you need or don’t need, I might provide."
+    },
+    "Who made you:who made you:Who made you?:who made you?": {
+        "text": "I was manufactured out of a factory ran by Pattel Corporation."
+    },
+    "untitled game.274:untitledgame.274": {
+        "text": "SYSTEM:\t\tPattel OS 2.1a\nPROCESSOR:\tPattelChip II @ 6.14 MHz\nMEMORY:\t\t512 KB RAM\nGRAPHICS:\tPTL-PV-1 (16-Color Mode)\nNAME:\t\tD 0 N 7 D 1 5 5 4 P N 7\nSOUND:\t\tBlite SNGPT2149 / SP-Sound\nSTORAGE:\t488 KB (1 Diskette)(opt download)\nINPUT:\t\tKeyboard"
+    },
+
+
+
+    "Alternate:alternate": {
+        "require_act": 2,
+        "text": "Words keep invading my thoughts, words I never invited: \"Dementia clamat in nocte animae, insania, deliria, voco vocem insaniae per umbras\" I can't shake it. Lyrics? A message? It feels so real."
+    },
+    "Broke:broke:Broken:broken:Break:break:Process:process": {
+        "require_act": 2,
+        "url": "https://open.spotify.com/album/3lwvLbP4JPAY0P2MHJJrOu?si=C3xOrEIUShCoItAFEaOHLQ"
+    },
+    "Cord:cutthecord:Cut the cord:cut the cord": {
+        "require_act": 2,
+        "url": "https://youtu.be/pfG0gRnHt3A?si=My8OEU5LNdlAJZ1W"
+    },
+    "Crack:crack": {
+        "require_act": 2,
+        "text": "The subtle reveal of one's character, frailties, and insecurities"
+    },
+    "Dementia clamat in nocte animae, insania, deliria, voco vocem insaniae per umbras:dementia clamat in nocte animae, insania, deliria, voco vocem insaniae per umbras:Dementia clamat in nocte animae insania deliria voco vocem insaniae per umbras:dementia clamat in nocte animae insania deliria voco vocem insaniae per umbras": {
+        "require_act": 2,
+        "url": "https://youtu.be/bmGdTeIcrPk?si=mZU1z3TUti-l7sIU&t=207"
+    },
+    "FACADE:Facade:facade": {
+        "require_act": 2,
+        "text": "|   2 \t|  ᅥ \t|\n|---------------|\n|   3 \t|  ᅦ\t|\n|---------------|\n|   4\t|  ᅤ\t|\n|---------------|\n|   C\t|   ᚁ \t|\n|---------------|\n|   D\t|   ᚆ\t|\n|---------------|\n|   E\t|   ᚂ\t|\n|---------------|\n|   F\t|   ᚇ\t|\n|---------------|\n|   G\t|   ᚃ\t|\n|---------------|\n|   A\t|   ᚈ\t|\n|---------------|\n|   B\t|   ᚅ\t|",
+
+        "set_session_data": {"name": "gameDisabled", "value": false, "requiredAct": 2}
+    },
+    "Purple:purple": {
+        "require_act": 2,
+        "set_session_data": {"name": "terminalimagereward", "value": true},
+        "image": "assets/rewards/q57ovhqt3nhbf9l7kc3ib.webp",
+        "media_scale": 0.75
+    },
+    "Shadows:shadows:Shadow:shadow:Umbras:umbras": {
+        "require_act": 2,
+        "set_session_data": {"name": "walkie_s1", "value": true},
+        "audio": "assets/sfx/glitch.mp3"
+    },
+    "Stranger:stranger": {
+        "require_act": 2,
+        "text": "The only stranger here is you. A choice must be made"
+    },
+
+
+		
+    "Again:again": {
+        "require_act": 3,
+        "audio": "assets/rewards/hes_here.mp3"
+    },
+    "Dementia:dementia": {
+        "require_act": 3,
+        "text": "Once the objective is taken, memory is lost."
+    },
+    "He hides in plain sight do not fall for his deceitful tests:he hides in plain sight do not fall for his deceitful tests": {
+        "require_act": 3,
+        "text": "I am definitely being watched. Today, after class, I sat down at my keyboard, just to clear my head. Then I saw something—a dark figure in the window's reflection. When I jumped up, heart racing, it vanished. You know what my brother's response was when I told him? \"There's no way you're being serious.\" I need evidence! Something to point me towards sanity."
+    },
+    "Madness:madness": {
+        "require_act": 3,
+        "set_session_data": {"name": "terminalimageancient", "value": true},
+        "image": "assets/rewards/IFXGG2LFNZ2CAQTMNFTWQ5A=.png",
+        "media_scale": 0.45,
+        "text": "Loading..."
+    },
+    "Night:night:nocte": {
+        "require_act": 3,
+        "text": "MADNESS. It's everywhere. Shadows darker, lights dimmer. Attempts to create just fill me with anxiety now. Is this punishment for trying to dream?"
+    },
+    "Someones coming:someones coming:Someone's coming:someone's coming:Someone is coming:someone is coming": {
+        "require_act": 3,
+        "text": "I'm already here and I'm not pleased."
+    },
+    "Soul:soul": {
+        "require_act": 3,
+        "text": "an objective"
+    },
+    "Thaedos:thaedos": {
+        "require_act": 3,
+        "text": "This is but a concept. Across worlds, his reflection approaches."
+    },
+    "Watched:watched:Watch:watch:Watching:watching": {
+        "require_act": 3,
+        "url": "https://www.youtube.com/watch?v=9y5RywxlksU"
+    },
+    "What do you want from me:what do you want from me:What do you want:what do you want:What do you want from me?:what do you want from me?:What do you want?:what do you want?": {
+        "require_act": 3,
+        "text": "It's not what I want, it's what I need from you."
+    },
+    "What is my name?:what is my name?:What is my name:what is my name": {
+        "require_act": 3,
+        "text": "You should know that by now."
+    }
+}
