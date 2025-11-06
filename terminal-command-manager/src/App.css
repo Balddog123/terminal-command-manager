@@ -95,23 +95,23 @@
   width: 250px;
 }
 
-
+/*COMMAND TABLE*/
 .command-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* 🔹 Forces fixed column widths */
 }
-
-.command-table td,
-.command-table th {
+.command-table th,
+.command-table td {
   border: 1px solid #ccc;
   padding: 4px;
-  vertical-align: top; /* ensures textareas grow downward instead of overlapping */
+  height: 30px; /* your fixed row height */
+  white-space: nowrap; /* keeps text on one line */
+  overflow: hidden; /* hides overflow */
+  text-overflow: ellipsis; /* adds "..." when text overflows */
 }
 
-.command-table tr {
-  height: auto; /* allows rows to expand */
-}
-
+/*LOGIN*/
 .login-container {
   display: flex;
   flex-direction: column;

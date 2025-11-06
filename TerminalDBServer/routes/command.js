@@ -69,24 +69,14 @@ router.get("/:id", async (req, res) => {
 // POST route: add a new command
 router.post("/", async (req, res) => {
   try {
-    console.log(`Attempting to add new command:`);
-    console.log(req.body);
     const commands = await getCommands();
-    console.log(`Attempting to get commands:`);
-    console.log(commands);
+
     // object -> array
-    console.log(`Attempting to convert json to array:`);
-    const commandsToArray = objectToArray(commands);    
-    console.log(commandsToArray);
-    console.log(`Attempting to push new command to array:`);
+    const commandsToArray = objectToArray(commands);
     commandsToArray.push(req.body);
-    console.log(commandsToArray);
-    console.log('Attempting to convert array to single object');
     const newCommands = arrayToObject(commandsToArray);
-    console.log(newCommands);
-    console.log(`Attempting to save commands:`);
     await saveCommands(newCommands);
-    console.log(commands);
+    
     res.status(201).json({ message: "Command added"});
   } catch (error) {
     res.status(500).json({ message: "Error saving command", error });
@@ -96,23 +86,34 @@ router.post("/", async (req, res) => {
 //PUT: update single command
 router.put("/updateone/:id", async (req, res) => {
   console.log(`Attempting to update command ${req.params.id}...`);
-    try{
-      const commands = await getCommands();
+  const {key, objectData} = req.body;
+  try{
+    const commands = await getCommands();
 
-      const index = commands.findIndex((cmd) => cmd.id === req.params.id);
-
-      if (index === -1){
-        return res.status(404).json({message: `Command with id ${req.params.id} not found`});
-      }
-
-      commands[index] = {...commands[index], ...req.body};
-      await saveCommands(commands);
-
-      res.status(200).json({message: "Command updated", command: commands[index]});
-    }catch(error){
-      console.log("500 Error...");
-        res.status(500).json({message: "Error updating command", error});
+    if (!commands[req.params.id]){
+      console.log(`Command with id ${req.params.id} not found`);
+      return res.status(404).json({message: `Command with id ${req.params.id} not found`});
     }
+    
+    // Rebuild the object, keeping order, replacing the old key with the new one
+    const newCommands = {};
+    for (const [k, v] of Object.entries(commands)) {
+      if (k === req.params.id) {
+        newCommands[key] = objectData; // insert new/updated command in the same spot
+      } else {
+        newCommands[k] = v; // keep other commands as-is
+      }
+    }
+
+    //update the stored json file
+    await saveCommands(newCommands);
+    console.log(`Saved command...`);
+
+    res.status(200).json({message: "Command updated", command: commands[req.params.id]});
+  }catch(error){
+    console.log(error);
+    res.status(500).json({message: "Error updating command", error});
+  }
 });
 
 router.put("/updateall", async(req, res) => {
