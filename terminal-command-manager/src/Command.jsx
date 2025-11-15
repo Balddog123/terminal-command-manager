@@ -19,20 +19,51 @@ function Command() {
     url: "",
     html: "",
     debug_only: false,
+    set_session_data: null
   });
   const [fetchId, setFetchId] = useState(id)
   const [key, setKey] = useState(location.state?.key);
 
-  const handleInputChange = (matchKey, field, value) =>{
+  const handleInputChange = (section, field, value) => {
     setSaveEnabled(true);
-    console.log(`Input changing: ${commandData}`);
+
+    // If updating set_session_data
+    if (section === "set_session_data") {
+      const existing = commandData.set_session_data || { name: "", value: "" };
+
+      const updated = {
+        ...existing,
+        [field]: value
+      };
+      console.log(updated)
+      if (
+        String(updated.name ?? "").trim() === "" &&
+        updated.value === 0
+      ) {
+        setCommand(prev => {
+          const copy = { ...prev };
+          delete copy.set_session_data;
+          return copy;
+        });
+        return;
+      }
+
+      // Otherwise update normally
+      setCommand(prev => ({
+        ...prev,
+        set_session_data: updated
+      }));
+
+      return;
+    }
+
+    // Default updater for all other fields
     setCommand(prev => ({
       ...prev,
-      [field]: value
+      [section]: value
     }));
-
-    console.log(`Input result: ${commandData}`);
   };
+
 
   const handleCommandNameChange = (newKey) =>{
     setSaveEnabled(true);
@@ -83,7 +114,7 @@ function Command() {
                 const selectedValues = Array.from(e.target.selectedOptions, (opt) =>
                   parseInt(opt.value, 10)
                 );
-                handleInputChange(id, "terminal_num", selectedValues);
+                handleInputChange("", "terminal_num", selectedValues);
               }}
             >
               <option value={0}>First</option>
@@ -98,7 +129,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.text}
-              onChange={(e) => handleInputChange(id, "text", e.target.value)}
+              onChange={(e) => handleInputChange("", "text", e.target.value)}
             />
           </div>
 
@@ -109,7 +140,7 @@ function Command() {
               className="table-input"
               value={commandData.require_act ?? ""}
               onChange={(e) =>
-                handleInputChange(id, "require_act", Number(e.target.value))
+                handleInputChange("", "require_act", Number(e.target.value))
               }
             />
           </div>
@@ -121,7 +152,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.video}
-              onChange={(e) => handleInputChange(id, "video", e.target.value)}
+              onChange={(e) => handleInputChange("", "video", e.target.value)}
             />
           </div>
 
@@ -133,7 +164,7 @@ function Command() {
               type="text"
               value={commandData.media_scale}
               onChange={(e) =>
-                handleInputChange(id, "media_scale", parseFloat(e.target.value))
+                handleInputChange("", "media_scale", parseFloat(e.target.value))
               }
             />
           </div>
@@ -145,7 +176,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.image}
-              onChange={(e) => handleInputChange(id, "image", e.target.value)}
+              onChange={(e) => handleInputChange("", "image", e.target.value)}
             />
           </div>
 
@@ -156,7 +187,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.audio}
-              onChange={(e) => handleInputChange(id, "audio", e.target.value)}
+              onChange={(e) => handleInputChange("", "audio", e.target.value)}
             />
           </div>
 
@@ -167,7 +198,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.url}
-              onChange={(e) => handleInputChange(id, "url", e.target.value)}
+              onChange={(e) => handleInputChange("", "url", e.target.value)}
             />
           </div>
 
@@ -178,7 +209,7 @@ function Command() {
               rows={1}
               type="text"
               value={commandData.html}
-              onChange={(e) => handleInputChange(id, "html", e.target.value)}
+              onChange={(e) => handleInputChange("", "html", e.target.value)}
             />
           </div>
 
@@ -188,12 +219,37 @@ function Command() {
               id={"debug_only-" + id}
               value={commandData.debug_only}
               onChange={(e) =>
-                handleInputChange(id, "debug_only", e.target.value === "true")
+                handleInputChange("", "debug_only", e.target.value === "true")
               }
             >
               <option value={false}>False</option>
               <option value={true}>True</option>
             </select>
+          </div>
+          <div className="command-row">
+            <label>Set Session Data</label>
+            <div>
+              Name:
+            <textarea
+              className="table-textarea"
+              rows={1}
+              value={commandData.set_session_data?.name ?? ""}
+              onChange={(e) =>
+                handleInputChange("set_session_data", "name", e.target.value)
+              }
+            /></div>
+            <div>
+              Value:
+              <textarea
+              className="table-textarea"
+              rows={1}
+              value={commandData.set_session_data?.value ?? ""}
+              onChange={(e) =>
+                handleInputChange("set_session_data", "value", Number(e.target.value))
+              }
+            />
+            </div>
+            
           </div>
         </div>
         <input type="submit" value="Save Changes" disabled={!saveEnabled}/>
