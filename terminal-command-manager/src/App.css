@@ -110,6 +110,13 @@
   overflow: hidden; /* hides overflow */
   text-overflow: ellipsis; /* adds "..." when text overflows */
 }
+.command-sectiontitle {
+  font-size: larger;
+  
+}
+.section-break {
+  margin-top: 20px;
+}
 
 /*LOGIN*/
 .login-container {
